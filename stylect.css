@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  height: 100vh;
+}
+
+/* Common border and padding */
+.grid-container > div {
+  border: 1px solid white;
+  padding: 2rem;
+}
+
+/* Left video */
+.video-left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 6;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.video-left video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Our Findings title */
+.title-box {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: flex-end;
+}
+
+.title-box h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1;
+  color: white;
+  font-family: Calibri, sans-serif;
+  letter-spacing: 1rem;
+}
+
+/* Description box */
+.description-box {
+  grid-column: 2 / 3;
+  grid-row: 3 / 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description-box p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.description-box button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* Media box (GIF replaces sofa) */
+.media-box {
+  grid-column: 3 / 4;
+  grid-row: 3 / 6;
+  padding: 0;
+  overflow: hidden;
+}
+
+.media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right column text boxes */
+.text-box {
+  grid-column: 4 / 5;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 2rem;
+}
+
+.tabs-right {
+  grid-column: 4 / 5;
+  grid-row: 1 / 6;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  border-left: 1px solid white;
+}
+
+.tabs-right .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tabs-right .tab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.box-1 { grid-row: 1 / 2; }
+.box-2 { grid-row: 2 / 3; }
+.box-3 { grid-row: 3 / 4; }
+.box-4 { grid-row: 4 / 6; }
